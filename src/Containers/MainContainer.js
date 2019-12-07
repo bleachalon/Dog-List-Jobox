@@ -67,7 +67,7 @@ class MainContainer extends Component {
     getAllBreed = ()=> {
         return new Promise((resolve, reject) => {
                 this.breedImageService.getAllBreed().then(res => {
-                    if(res.status=="success"){
+                    if(res.status==="success"){
                         this.setState({breeds: res.message})
                         resolve("success")
                     }else{
@@ -83,7 +83,7 @@ class MainContainer extends Component {
     generateBreedOptions = () => {
         let x = [];
         for(let name in this.state.breeds){
-            if(this.state.breeds[name].length!=0){
+            if(this.state.breeds[name].length!==0){
                 for(let i=0;  i<this.state.breeds[name].length; i++){
                     x.push(name+ '/' + this.state.breeds[name][i]);
                 }
@@ -101,7 +101,6 @@ class MainContainer extends Component {
     render() {
         return (
             <Container fluid>
-                {console.log(this.state.keyword)}
                 <Row>
                     <Col>
                         <NavbarComponent breeds={this.state.breedName} keywords={this.state.keyword}
@@ -111,7 +110,7 @@ class MainContainer extends Component {
 
                 <Row>
                     <Col>
-                    {this.state.breedImage.length!=0? <ImageComponent breedImage = {this.state.breedImage}
+                    {this.state.breedImage!== 'Breed not found (master breed does not exist)'? <ImageComponent breedImage = {this.state.breedImage}
                         loadFunc={this.loadFunc}/>: 'Loading...'}
                     </Col>
                 </Row>

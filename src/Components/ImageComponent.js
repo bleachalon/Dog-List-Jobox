@@ -21,7 +21,7 @@ const ImageComponent = ({breedImage, loadFunc}) =>
             loader={<div className="loader" key={0}>Coming soon ...</div>}>
             {
                 breedImage.map((image) =>
-                    <a href={image}><Image  className={"pic"} src={image} key={image} alt={image}
+                    <a href={image} key={image}><Image  className={"pic"} src={image} key={image} alt={image}
                                            style={{width: '20rem', height: '21rem', margin: "1rem 1rem 1rem 1rem"}}/></a>
                 )
 
