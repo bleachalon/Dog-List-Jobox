@@ -3,14 +3,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Dog List
 Provide dog pics for user. User can search by breeds
 
-## Container
+## Containers
 1. MainContainer: Assign route and render Image & Navbar Component
 
-## Component
+## Components
 1. ImageComponent: Render dog images
 2. NavbarComponent: Render navigation bar with search
 
-## Service
+## Services
 1. BreedImageService: Provide restful services by calling third-party api
 
 <br/>
